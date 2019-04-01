@@ -29,7 +29,7 @@ const envDbFilename = process.env.ECOM_AUTH_DB
 // handle new promise
 promise = new Promise((resolve, reject) => {
   // setup database and table
-  setup = dbFilename => {
+  setup = (dbFilename, disableUpdates) => {
     dbFilename = dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
     if (!client || client.dbFilename !== dbFilename) {
       const table = 'ecomplus_app_auth'
@@ -60,8 +60,10 @@ promise = new Promise((resolve, reject) => {
       // resolve promise with lib methods when DB is ready
       const ready = err => {
         if (!err) {
-          // update access tokens periodically
-          require('./lib/services/update-tokens')(client)
+          if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
+            // update access tokens periodically
+            require('./lib/services/update-tokens')(client)
+          }
 
           resolve({
             getAuth: require('./lib/methods/get-auth')(client),
