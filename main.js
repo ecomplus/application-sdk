@@ -42,14 +42,14 @@ const envDbFilename = process.env.ECOM_AUTH_DB
 // handle new promise
 promise = new Promise((resolve, reject) => {
   // setup database and table
-  setup = (dbFilename, disableUpdates) => {
-    dbFilename = dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
+  setup = (dbFilename, disableUpdates, firestoreDb) => {
+    dbFilename = firestoreDb ? null : dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
     if (!client || client.dbFilename !== dbFilename) {
       const table = 'ecomplus_app_auth'
 
       // init SQLite3 client with database filename
       // reject all on error
-      const db = new sqlite.Database(dbFilename, err => {
+      const db = firestoreDb || new sqlite.Database(dbFilename, err => {
         if (err) {
           reject(err)
         } else {
