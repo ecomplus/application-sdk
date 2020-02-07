@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-beta.1](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.0...v1.11.0-beta.1) (2020-02-07)
+
+
+### Bug Fixes
+
+* **setup:** requiring 'saveProcedures' method ([#5](https://github.com/ecomclub/ecomplus-app-sdk/issues/5)) ([3f1fa25](https://github.com/ecomclub/ecomplus-app-sdk/commit/3f1fa2525c8ce48452602bb73e47507286f53b16))
+
 ## [1.11.0-beta.0](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.10.1-beta.0...v1.11.0-beta.0) (2020-02-07)
 
 
