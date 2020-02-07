@@ -85,7 +85,8 @@ promise = new Promise((resolve, reject) => {
             apiApp: require('./lib/methods/api-app')(client),
             appPublicBody: require('./lib/methods/app-public-body')(client),
             refreshToken: require('./lib/methods/refresh-token')(client),
-            configureSetup: require('./lib/methods/configure-setup')(client)
+            configureSetup: require('./lib/methods/configure-setup')(client),
+            saveProcedures: require('./lib/methods/save-procedures')(client)
           })
         } else {
           reject(err)
