@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1-beta.0](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.10.0...v1.10.1-beta.0) (2020-02-07)
+
 ## [1.10.0](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.9.7...v1.10.0) (2019-10-16)
 
 
