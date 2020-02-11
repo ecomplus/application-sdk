@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-beta.2](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.1...v1.11.0-beta.2) (2020-02-11)
+
+
+### Bug Fixes
+
+* **setup:** auto call ready() when firestore being used ([f8c9ac8](https://github.com/ecomclub/ecomplus-app-sdk/commit/f8c9ac8067c0b5acf3c6694e257ccaa73ca1dc6d))
+
 ## [1.11.0-beta.1](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.0...v1.11.0-beta.1) (2020-02-07)
 
 
