@@ -29,47 +29,26 @@ const axios = require('axios').create({
   timeout: 60000
 })
 // always JSON for request with body data
-;[ 'post', 'patch', 'put' ].forEach(method => {
+;['post', 'patch', 'put'].forEach(method => {
   axios.defaults.headers[method]['Content-Type'] = 'application/json'
 })
 
 // keep returned client and promise
 // optional setup constructor function
-let promise, client, setup
+let client, setup
 // try to get database filename from environtment variable
 const envDbFilename = process.env.ECOM_AUTH_DB
 
 // handle new promise
-promise = new Promise((resolve, reject) => {
+const promise = new Promise((resolve, reject) => {
   // setup database and table
   setup = (dbFilename, disableUpdates, firestoreDb) => {
     dbFilename = firestoreDb ? null : dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
     if (!client || client.dbFilename !== dbFilename) {
       const table = 'ecomplus_app_auth'
 
-      // init SQLite3 client with database filename
-      // reject all on error
-      const db = firestoreDb || new sqlite.Database(dbFilename, err => {
-        if (err) {
-          reject(err)
-        } else {
-          // try to run first query creating table
-          db.run('CREATE TABLE IF NOT EXISTS ' + table + ` (
-            created_at                  DATETIME  NOT NULL  DEFAULT CURRENT_TIMESTAMP,
-            updated_at                  DATETIME  NULL,
-            application_id              VARCHAR   NOT NULL,
-            application_app_id          INTEGER   NOT NULL,
-            application_title           VARCHAR   NOT NULL,
-            authentication_id           VARCHAR   NOT NULL  PRIMARY KEY,
-            authentication_permissions  TEXT      NULL,
-            store_id                    INTEGER   NOT NULL,
-            access_token                TEXT      NULL,
-            setted_up                   INTEGER   NOT NULL  DEFAULT 0
-          );`, ready)
-        }
-      })
-      client = { dbFilename, db, table, axios }
-
+      // instance client object
+      client = { dbFilename, table, axios }
       // resolve promise with lib methods when DB is ready
       const ready = err => {
         if (!err) {
@@ -91,6 +70,34 @@ promise = new Promise((resolve, reject) => {
         } else {
           reject(err)
         }
+      }
+
+      if (firestoreDb) {
+        // Firestore client is supposed to be ready
+        client.db = firestoreDb
+        ready()
+      } else {
+        // init SQLite3 client with database filename
+        // reject all on error
+        client.db = new sqlite.Database(dbFilename, err => {
+          if (err) {
+            reject(err)
+          } else {
+            // try to run first query creating table
+            client.db.run('CREATE TABLE IF NOT EXISTS ' + table + ` (
+              created_at                  DATETIME  NOT NULL  DEFAULT CURRENT_TIMESTAMP,
+              updated_at                  DATETIME  NULL,
+              application_id              VARCHAR   NOT NULL,
+              application_app_id          INTEGER   NOT NULL,
+              application_title           VARCHAR   NOT NULL,
+              authentication_id           VARCHAR   NOT NULL  PRIMARY KEY,
+              authentication_permissions  TEXT      NULL,
+              store_id                    INTEGER   NOT NULL,
+              access_token                TEXT      NULL,
+              setted_up                   INTEGER   NOT NULL  DEFAULT 0
+            );`, ready)
+          }
+        })
       }
     }
     return promise
