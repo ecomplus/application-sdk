@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-beta.3](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.2...v1.11.0-beta.3) (2020-02-13)
+
+
+### Bug Fixes
+
+* **handle-callback:** fix promises with firestore and clean (dry) code ([c6ff0c0](https://github.com/ecomclub/ecomplus-app-sdk/commit/c6ff0c0a09fd0b2bc4dcca4632bb101eab94b792))
+
 ## [1.11.0-beta.2](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.1...v1.11.0-beta.2) (2020-02-11)
 
 
