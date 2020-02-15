@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-rc.1](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-rc.0...v1.11.0-rc.1) (2020-02-15)
+
+
+### Features
+
+* **debug:** handle ECOM_AUTH_DEBUG env and debug setup and services ([aaac316](https://github.com/ecomclub/ecomplus-app-sdk/commit/aaac316be4a1fda433e60824646e9d4f48b29551))
+
 ## [1.11.0-rc.0](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.3...v1.11.0-rc.0) (2020-02-15)
 
 
