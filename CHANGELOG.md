@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0-rc.0](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.3...v1.11.0-rc.0) (2020-02-15)
+
+
+### Bug Fixes
+
+* **api-request:** prevent not fulfilled firestore delete promise ([03bfb77](https://github.com/ecomclub/ecomplus-app-sdk/commit/03bfb77a64652a3710f7251a1215656740ad2cb8))
+* **firestore:** fix handling update tokens and get auth with firestore/cloud functions ([#6](https://github.com/ecomclub/ecomplus-app-sdk/issues/6)) ([e5c6641](https://github.com/ecomclub/ecomplus-app-sdk/commit/e5c6641fdeb050ad444ab6d73b6449172ffc511c))
+* **get-auth:** fix handling query reference (when no auth id set) ([0e4e8b6](https://github.com/ecomclub/ecomplus-app-sdk/commit/0e4e8b6c74dcfaa09898b329ee87b1aaf08233dd))
+* **handle-callback:** preset 'updated_at' on firestore coll ([9579f7e](https://github.com/ecomclub/ecomplus-app-sdk/commit/9579f7e5b168e10fb3cc01859da6660fa70ed533))
+* **update-tokens:** fix handling firestore query, env disable interval ([c4259dc](https://github.com/ecomclub/ecomplus-app-sdk/commit/c4259dc3220c5df0108b1a5a17e046d93020bbba))
+
 ## [1.11.0-beta.3](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-beta.2...v1.11.0-beta.3) (2020-02-13)
 
 

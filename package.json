@@ -1,11 +1,11 @@
 {
   "name": "ecomplus-app-sdk",
-  "version": "1.11.0-beta.3",
+  "version": "1.11.0-rc.0",
   "description": "App auth and methods to Store API with NodeJS and SQLite",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "standard-version --prerelease beta"
+    "release": "standard-version --prerelease rc"
   },
   "repository": {
     "type": "git",
