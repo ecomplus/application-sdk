@@ -74,7 +74,8 @@ const promise = new Promise((resolve, reject) => {
 
       if (firestoreDb) {
         // Firestore client is supposed to be ready
-        client.db = firestoreDb
+        // collectionReferece as db
+        client.db = client.collRef = firestoreDb.collection(table)
         ready()
       } else {
         // init SQLite3 client with database filename
