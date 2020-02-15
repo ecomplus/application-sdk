@@ -47,8 +47,20 @@ const promise = new Promise((resolve, reject) => {
     if (!client || client.dbFilename !== dbFilename) {
       const table = 'ecomplus_app_auth'
 
-      // instance client object
-      client = { dbFilename, table, axios }
+      // setup instance client object
+      const debug = !process.env.ECOM_AUTH_DEBUG ? null : msg => {
+        console.log(`[ECOM_AUTH] ${msg}`)
+      }
+      client = {
+        dbFilename,
+        table,
+        axios,
+        debug
+      }
+      if (debug) {
+        debug(`Starting E-Com Plus App SDK with ${(firestoreDb ? 'Firestore' : 'SQLite3')}`)
+      }
+
       // resolve promise with lib methods when DB is ready
       const ready = err => {
         if (!err) {
@@ -67,6 +79,9 @@ const promise = new Promise((resolve, reject) => {
             configureSetup: require('./lib/methods/configure-setup')(client),
             saveProcedures: require('./lib/methods/save-procedures')(client)
           })
+          if (debug) {
+            debug('✓ `ecomAuth` is ready')
+          }
         } else {
           reject(err)
         }
