@@ -17,7 +17,13 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org/'
 
+      - name: Edit package.json to remove custom registry config
+        run: |
+          node -p "const pkg = require('./package.json'); \
+          delete pkg.publishConfig.registry; \
+          JSON.stringify(pkg, null, 2)" > package.json
+
       - name: Publish package to npm registry
-        run: npm publish --registry=https://registry.npmjs.org
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
