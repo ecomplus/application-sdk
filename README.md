@@ -1,10 +1,25 @@
-# ecomplus-app-sdk
+# application-sdk
 
-[![CodeFactor](https://www.codefactor.io/repository/github/ecomclub/ecomplus-app-sdk/badge)](https://www.codefactor.io/repository/github/ecomclub/ecomplus-app-sdk)
-[![npm version](https://img.shields.io/npm/v/ecomplus-app-sdk.svg)](https://www.npmjs.org/ecomplus-app-sdk)
-[![license mit](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CodeFactor](https://www.codefactor.io/repository/github/ecomplus/application-sdk/badge)](https://www.codefactor.io/repository/github/ecomplus/application-sdk)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Authenticating apps to Store API with NodeJS and SQLite
+Abstractions for apps authentication and methods to
+[E-Com Plus Store API](https://developers.e-com.plus/docs/api/#/store/)
+with NodeJS and Firestore/SQLite.
+
+## Getting started
+
+Add `@ecomplus:registry=https://npm.pkg.github.com` to your `.npmrc`:
+
+```bash
+echo '@ecomplus:registry=https://npm.pkg.github.com' > .npmrc
+```
+
+Then add `@ecomplus/application-sdk` to pkg dependencies:
+
+```bash
+npm i --save @ecomplus/application-sdk
+```
 
 ## Environment variables
 
