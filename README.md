@@ -18,7 +18,7 @@ echo '@ecomplus:registry=https://npm.pkg.github.com' > .npmrc
 Then add `@ecomplus/application-sdk` to pkg dependencies:
 
 ```bash
-npm i --save @ecomplus/application-sdk
+npm i --save @ecomplus/application-sdk --no-optional
 ```
 
 ## Environment variables
