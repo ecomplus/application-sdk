@@ -21,7 +21,7 @@ jobs:
         run: |
           node -p "const pkg = require('./package.json'); \
           delete pkg.publishConfig.registry; \
-          JSON.stringify(pkg, null, 2)" > package.json
+          JSON.stringify(pkg, null, 2)" > pkg.json && mv pkg.json package.json
 
       - name: Publish package to npm registry
         run: npm publish
