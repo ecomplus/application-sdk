@@ -9,14 +9,6 @@ with NodeJS and Firestore/SQLite.
 
 ## Getting started
 
-Add `@ecomplus:registry=https://npm.pkg.github.com` to your `.npmrc`:
-
-```bash
-echo '@ecomplus:registry=https://npm.pkg.github.com' > .npmrc
-```
-
-Then add `@ecomplus/application-sdk` to pkg dependencies:
-
 ```bash
 npm i --save @ecomplus/application-sdk --no-optional
 ```
