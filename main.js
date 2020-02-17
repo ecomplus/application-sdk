@@ -16,10 +16,6 @@ const ecomServerIps = [
   '2604:a880:400:d0::13:5001'
 ]
 
-// SQLite3 client
-// https://github.com/mapbox/node-sqlite3
-const sqlite = require('sqlite3').verbose()
-
 // axios HTTP client
 // https://github.com/axios/axios
 // create an instance using the config defaults provided by the library
@@ -93,7 +89,12 @@ const promise = new Promise((resolve, reject) => {
         client.db = client.collRef = firestoreDb.collection(table)
         ready()
       } else {
+        // SQLite3 client
+        // https://github.com/mapbox/node-sqlite3
+        const sqlite = require('sqlite3').verbose()
+
         // init SQLite3 client with database filename
+        // https://github.com/mapbox/node-sqlite3
         // reject all on error
         client.db = new sqlite.Database(dbFilename, err => {
           if (err) {
