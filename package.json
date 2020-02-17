@@ -1,44 +1,54 @@
 {
-  "name": "ecomplus-app-sdk",
+  "name": "@ecomplus/application-sdk",
   "version": "1.11.0-rc.1",
-  "description": "App auth and methods to Store API with NodeJS and SQLite",
+  "description": "App auth and methods to E-Com Plus Store API with NodeJS and Firestore/SQLite",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "standard-version --prerelease rc"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ecomclub/ecomplus-app-sdk.git"
+    "url": "git+https://github.com/ecomplus/application-sdk.git"
   },
   "keywords": [
     "ecomplus",
     "app",
+    "integrations",
+    "application",
+    "ecommerce",
     "authentication",
     "callback",
-    "sqlite"
+    "sqlite",
+    "firestore",
+    "firebase"
   ],
-  "author": "E-Com Club",
+  "author": "E-Com Club <ti@e-com.club>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ecomclub/ecomplus-app-sdk/issues"
+    "url": "https://github.com/ecomplus/application-sdk/issues"
   },
-  "homepage": "https://github.com/ecomclub/ecomplus-app-sdk#readme",
-  "dependencies": {
+  "homepage": "https://github.com/ecomplus/application-sdk#readme",
+  "optionalDependencies": {
     "sqlite3": "4.x",
-    "axios": "0.x",
     "firebase-admin": "8.x"
   },
+  "dependencies": {
+    "axios": "0.x"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "husky": "^3.0.9",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3",
     "standard": "^14.3.1",
-    "standard-version": "^7.0.0"
+    "standard-version": "^7.1.0"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
