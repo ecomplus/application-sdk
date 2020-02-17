@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/ecomplus/application-sdk/compare/v1.11.0-rc.1...v1.11.0) (2020-02-17)
+
+
+### Bug Fixes
+
+* **deps:** require sqlite3/firebase-admin only when needed ([af55228](https://github.com/ecomplus/application-sdk/commit/af552283a2fcf2e7e48bfe6b53e7985b3fa6df5e))
+* **deps:** require sqlite3/firebase-admin only when needed ([00fd543](https://github.com/ecomplus/application-sdk/commit/00fd54338afbf8ebc862ba11ddb21cb6bfd4a3da))
+
 ## [1.11.0-rc.1](https://github.com/ecomclub/ecomplus-app-sdk/compare/v1.11.0-rc.0...v1.11.0-rc.1) (2020-02-15)
 
 
