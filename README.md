@@ -1,6 +1,7 @@
 # application-sdk
 
 [![CodeFactor](https://www.codefactor.io/repository/github/ecomplus/application-sdk/badge)](https://www.codefactor.io/repository/github/ecomplus/application-sdk)
+[![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk.svg)](https://www.npmjs.org/@ecomplus/application-sdk)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Abstractions for apps authentication and methods to
