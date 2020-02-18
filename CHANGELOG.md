@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.4](https://github.com/ecomplus/application-sdk/compare/v1.11.3...v1.11.4) (2020-02-18)
+
+
+### Bug Fixes
+
+* **setup-timeout:** ignore setup timeout for Cloud Functions by default ([5edc1fb](https://github.com/ecomplus/application-sdk/commit/5edc1fbd4ea413bee796372c307e0dc2261eac0c))
+
 ### [1.11.3](https://github.com/ecomplus/application-sdk/compare/v1.11.2...v1.11.3) (2020-02-17)
 
 ### [1.11.2](https://github.com/ecomplus/application-sdk/compare/v1.11.1...v1.11.2) (2020-02-17)
