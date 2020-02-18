@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.6](https://github.com/ecomplus/application-sdk/compare/v1.11.5...v1.11.6) (2020-02-18)
+
+
+### Bug Fixes
+
+* **update-tokens:** ignore interval task for cloud functions by default ([d1dcfad](https://github.com/ecomplus/application-sdk/commit/d1dcfad465d845da4f3558bf152302054fd2c6f9))
+
 ### [1.11.5](https://github.com/ecomplus/application-sdk/compare/v1.11.4...v1.11.5) (2020-02-18)
 
 
