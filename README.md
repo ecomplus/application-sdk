@@ -10,17 +10,24 @@ Abstractions for apps authentication and methods to [E-Com Plus Store API](https
 npm i --save @ecomplus/application-sdk --no-optional
 ```
 
+You'll also need to install the database client (depending on your environment):
+
+```bash
+npm i --save sqlite3
+# OR
+npm i --save firestore
+```
+
 ## Environment variables
 
-Variable            | Value
----                 | ---
-`ECOM_AUTH_DB`      | `/dbs/ecom.sqlite3`
-`ECOM_AUTH_UPDATE`  | `enabled`
-
-- `ECOM_AUTH_DB` is **required** if you're not passing the DB filename as argument of setup function;
-
-- `ECOM_AUTH_UPDATE` is optional and enabled by default, set it to `disabled` if you want to disable the `update-tokens` automatic service.
+Variable                    | Default        |
+---                         | ---            | ---
+`ECOM_AUTH_DB`              | `./db.sqlite3` | SQLite3 database pathname (if not using Firestore).
+`ECOM_AUTH_UPDATE`          | `enabled`      | Set `disabled` to prevent `update-tokens` automatic service.
+`ECOM_AUTH_DEBUG`           |                | Set `true` to debug setup and background services.
+`ECOM_AUTH_SETUP_TIMEOUT`   | `enabled`      | `disabled` on Google (Firebase) Cloud Functions by default.
+`ECOM_AUTH_UPDATE_INTERVAL` | `enabled`      | `disabled` on Google (Firebase) Cloud Functions by default.
 
 ## Documentation
 
-> No documentation for methods yet (TODO)
+> No methods reference (TODO)
