@@ -120,12 +120,18 @@ const promise = new Promise((resolve, reject) => {
     return promise
   }
 
-  // timeout to handle setup
-  setTimeout(() => {
-    if (!client) {
-      reject(new Error('You must setup E-Com Plus auth before use SDK'))
-    }
-  }, 4000)
+  if (
+    process.env.ECOM_AUTH_SETUP_TIMEOUT !== 'disabled' &&
+    // ignore setup timeout for Google (Firebase) Cloud Functions by default
+    (!process.env.GCLOUD_PROJECT || process.env.ECOM_AUTH_SETUP_TIMEOUT === 'enabled')
+  ) {
+    // timeout to handle setup
+    setTimeout(() => {
+      if (!client) {
+        reject(new Error('You must setup E-Com Plus auth before use SDK'))
+      }
+    }, 4000)
+  }
 })
 
 if (envDbFilename) {
