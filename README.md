@@ -20,7 +20,7 @@ npm i --save firestore
 
 ## Environment variables
 
-Variable                    | Default        |
+Variable                    | Default        | Info
 ---                         | ---            | ---
 `ECOM_AUTH_DB`              | `./db.sqlite3` | SQLite3 database pathname (if not using Firestore).
 `ECOM_AUTH_UPDATE`          | `enabled`      | Set `disabled` to prevent `update-tokens` automatic service.
