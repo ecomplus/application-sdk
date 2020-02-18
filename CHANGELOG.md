@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.5](https://github.com/ecomplus/application-sdk/compare/v1.11.4...v1.11.5) (2020-02-18)
+
+
+### Bug Fixes
+
+* **get-auth:** for firestore, order by 'updated_at' desc ([dd87490](https://github.com/ecomplus/application-sdk/commit/dd87490cab9f0746cddf4665eee381c26b72b82c))
+
 ### [1.11.4](https://github.com/ecomplus/application-sdk/compare/v1.11.3...v1.11.4) (2020-02-18)
 
 
