@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.8](https://github.com/ecomplus/application-sdk/compare/v1.11.7...v1.11.8) (2020-03-18)
+
+
+### Bug Fixes
+
+* **deps:** @ecomplus/client requires @ecomplus/utils as peer ([f2f2dee](https://github.com/ecomplus/application-sdk/commit/f2f2dee4e2871942a5927828731ad22e2354f639))
+
 ### [1.11.7](https://github.com/ecomplus/application-sdk/compare/v1.11.6...v1.11.7) (2020-03-18)
 
 
