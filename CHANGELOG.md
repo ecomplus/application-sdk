@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.7](https://github.com/ecomplus/application-sdk/compare/v1.11.6...v1.11.7) (2020-03-18)
+
+
+### Bug Fixes
+
+* **api-request:** using ecomClient for better parsing and queue control ([fa3d2f2](https://github.com/ecomplus/application-sdk/commit/fa3d2f2b0a5a71c3750c7b889f0e9c15832597e8))
+
 ### [1.11.6](https://github.com/ecomplus/application-sdk/compare/v1.11.5...v1.11.6) (2020-02-18)
 
 
