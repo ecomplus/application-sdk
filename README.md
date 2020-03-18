@@ -13,9 +13,9 @@ npm i --save @ecomplus/application-sdk --no-optional
 You'll also need to install the database client (depending on your environment):
 
 ```bash
-npm i --save sqlite3
+npm i --save sqlite3@4
 # OR
-npm i --save firestore
+npm i --save firebase-admin@8
 ```
 
 ## Environment variables
