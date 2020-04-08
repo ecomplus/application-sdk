@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.9](https://github.com/ecomplus/application-sdk/compare/v1.11.8...v1.11.9) (2020-04-08)
+
+
+### Bug Fixes
+
+* **api-request:** prefer not using promise.finnaly for node support ([5a5de46](https://github.com/ecomplus/application-sdk/commit/5a5de46970ea1cd22dc050aba47966293379f434))
+
 ### [1.11.8](https://github.com/ecomplus/application-sdk/compare/v1.11.7...v1.11.8) (2020-03-18)
 
 
