@@ -63,6 +63,8 @@ const promise = new Promise((resolve, reject) => {
           if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
             // update access tokens periodically
             require('./lib/services/update-tokens')(client)
+          } else if (debug) {
+            debug('Update tokens disabled')
           }
 
           resolve({
