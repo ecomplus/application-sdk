@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.13](https://github.com/ecomplus/application-sdk/compare/v1.11.12...v1.11.13) (2020-04-27)
+
+
+### Bug Fixes
+
+* **handle-callback:** fix creating firestore Timestamp (must set ns) ([51dfac7](https://github.com/ecomplus/application-sdk/commit/51dfac757c4bb580a5f3adba3555aa210d53cf7c))
+
 ### [1.11.12](https://github.com/ecomplus/application-sdk/compare/v1.11.11...v1.11.12) (2020-04-27)
 
 
