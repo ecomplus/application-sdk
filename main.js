@@ -75,7 +75,8 @@ const promise = new Promise((resolve, reject) => {
             appPublicBody: require('./lib/methods/app-public-body')(client),
             refreshToken: require('./lib/methods/refresh-token')(client),
             configureSetup: require('./lib/methods/configure-setup')(client),
-            saveProcedures: require('./lib/methods/save-procedures')(client)
+            saveProcedures: require('./lib/methods/save-procedures')(client),
+            deleteAuth: require('./lib/methods/delete-auth')(client)
           })
           if (debug) {
             debug('✓ `ecomAuth` is ready')
