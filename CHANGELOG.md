@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/ecomplus/application-sdk/compare/v1.11.13...v1.12.0) (2020-05-11)
+
+
+### Features
+
+* **delete-auth:** add new 'deleteAuth' method ([c1cd7b3](https://github.com/ecomplus/application-sdk/commit/c1cd7b3b1a5ec9eeb14c61a4c0b9703ad9597bd0))
+
+
+### Bug Fixes
+
+* **get-auth:** for sqlite, get authentication by last update ([d0dede2](https://github.com/ecomplus/application-sdk/commit/d0dede24e3ba32f234a3d98c806f7c334076d02d))
+* **update-tokens:** delete no more valid authentications on fail ([d9d2cbd](https://github.com/ecomplus/application-sdk/commit/d9d2cbdd026e9af02ea8c07e0ae4db134ab1d00d))
+
 ### [1.11.13](https://github.com/ecomplus/application-sdk/compare/v1.11.12...v1.11.13) (2020-04-27)
 
 
