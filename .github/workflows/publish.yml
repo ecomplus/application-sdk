@@ -27,3 +27,26 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create package.json for custom versions
+        run: |
+          node -p "const pkg = require('./package.json'); \
+          pkg.dependencies.sqlite3 = pkg.optionalDependencies.sqlite3; \
+          delete pkg.optionalDependencies; \
+          pkg.version += '-sqlite'; \
+          JSON.stringify(pkg, null, 2)" > pkg-sqlite.json && \
+          node -p "const pkg = require('./package.json'); \
+          pkg.dependencies['firebase-admin'] = pkg.optionalDependencies['firebase-admin']; \
+          delete pkg.optionalDependencies; \
+          pkg.version += '-firestore'; \
+          JSON.stringify(pkg, null, 2)" > pkg-firestore.json
+
+      - name: Publish Firestore version
+        run: mv pkg-firestore.json package.json && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish SQLite version
+        run: mv pkg-sqlite.json package.json && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
