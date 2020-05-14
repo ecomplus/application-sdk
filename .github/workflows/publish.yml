@@ -33,12 +33,12 @@ jobs:
           node -p "const pkg = require('./package.json'); \
           pkg.dependencies.sqlite3 = pkg.optionalDependencies.sqlite3; \
           delete pkg.optionalDependencies; \
-          pkg.version += '-sqlite'; \
+          pkg.version = (parseInt(pkg.version, 10) + 1) + '.0.0-sqlite.' + pkg.version; \
           JSON.stringify(pkg, null, 2)" > pkg-sqlite.json && \
           node -p "const pkg = require('./package.json'); \
           pkg.dependencies['firebase-admin'] = pkg.optionalDependencies['firebase-admin']; \
           delete pkg.optionalDependencies; \
-          pkg.version += '-firestore'; \
+          pkg.version = (parseInt(pkg.version, 10) + 1) + '.0.0-firestore.' + pkg.version; \
           JSON.stringify(pkg, null, 2)" > pkg-firestore.json
 
       - name: Publish Firestore version
