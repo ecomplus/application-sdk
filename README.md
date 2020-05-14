@@ -1,6 +1,6 @@
 # E-Com Plus Application SDK
 
-[![CodeFactor](https://www.codefactor.io/repository/github/ecomplus/application-sdk/badge)](https://www.codefactor.io/repository/github/ecomplus/application-sdk) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk.svg)](https://www.npmjs.org/@ecomplus/application-sdk) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk/firestore.svg)](https://www.npmjs.org/@ecomplus/application-sdk/v/firestore) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk/sqlite.svg)](https://www.npmjs.org/@ecomplus/application-sdk/v/sqlite) [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CodeFactor](https://www.codefactor.io/repository/github/ecomplus/application-sdk/badge)](https://www.codefactor.io/repository/github/ecomplus/application-sdk) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk.svg)](https://www.npmjs.org/@ecomplus/application-sdk) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk/firestore.svg)](https://www.npmjs.com/package/@ecomplus/application-sdk/v/firestore) [![npm version](https://img.shields.io/npm/v/@ecomplus/application-sdk/sqlite.svg)](https://www.npmjs.com/package/@ecomplus/application-sdk/v/sqlite) [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Abstractions for apps authentication and methods to [E-Com Plus Store API](https://developers.e-com.plus/docs/api/#/store/) with NodeJS and Firestore/SQLite.
 
