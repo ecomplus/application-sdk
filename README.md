@@ -6,11 +6,19 @@ Abstractions for apps authentication and methods to [E-Com Plus Store API](https
 
 ## Getting started
 
+Install pkg with `firestore` or `sqlite` tag:
+
+```bash
+npm i --save @ecomplus/application-sdk@firestore
+# OR
+npm i --save @ecomplus/application-sdk@sqlite
+```
+
+Or you may also install default version and respective database client (depending on your environment):
+
 ```bash
 npm i --save @ecomplus/application-sdk --no-optional
 ```
-
-You'll also need to install the database client (depending on your environment):
 
 ```bash
 npm i --save sqlite3@4
