@@ -42,11 +42,11 @@ jobs:
           JSON.stringify(pkg, null, 2)" > pkg-firestore.json
 
       - name: Publish Firestore version
-        run: mv pkg-firestore.json package.json && npm publish
+        run: mv pkg-firestore.json package.json && npm publish --tag=firestore
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish SQLite version
-        run: mv pkg-sqlite.json package.json && npm publish
+        run: mv pkg-sqlite.json package.json && npm publish --tag=sqlite
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
