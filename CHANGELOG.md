@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.4](https://github.com/ecomplus/application-sdk/compare/v1.12.3...v1.12.4) (2020-05-29)
+
+
+### Bug Fixes
+
+* **deps:** update @ecomplus/utils to v1.4.1 ([8bc9bf3](https://github.com/ecomplus/application-sdk/commit/8bc9bf305ab52de5cde96662c87a8629468b54c0))
+
 ### [1.12.3](https://github.com/ecomplus/application-sdk/compare/v1.12.2...v1.12.3) (2020-05-14)
 
 ### [1.12.2](https://github.com/ecomplus/application-sdk/compare/v1.12.1...v1.12.2) (2020-05-14)
