@@ -60,9 +60,12 @@ const promise = new Promise((resolve, reject) => {
       // resolve promise with lib methods when DB is ready
       const ready = err => {
         if (!err) {
+          const updateTokens = () => {
+            require('./lib/services/update-tokens')(client)
+          }
           if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
             // update access tokens periodically
-            require('./lib/services/update-tokens')(client)
+            updateTokens()
           } else if (debug) {
             debug('Update tokens disabled')
           }
@@ -76,7 +79,8 @@ const promise = new Promise((resolve, reject) => {
             refreshToken: require('./lib/methods/refresh-token')(client),
             configureSetup: require('./lib/methods/configure-setup')(client),
             saveProcedures: require('./lib/methods/save-procedures')(client),
-            deleteAuth: require('./lib/methods/delete-auth')(client)
+            deleteAuth: require('./lib/methods/delete-auth')(client),
+            updateTokens
           })
           if (debug) {
             debug('✓ `ecomAuth` is ready')
