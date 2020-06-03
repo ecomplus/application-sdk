@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/ecomplus/application-sdk/compare/v1.12.4...v1.13.0) (2020-06-03)
+
+
+### Features
+
+* **update-tokens:** return 'updateTokens' as function on setup resolve ([1f1c7da](https://github.com/ecomplus/application-sdk/commit/1f1c7da3de8287e29a3aca5761d530d55727e6f0))
+
 ### [1.12.4](https://github.com/ecomplus/application-sdk/compare/v1.12.3...v1.12.4) (2020-05-29)
 
 
