@@ -38,7 +38,7 @@ jobs:
           node -p "const pkg = require('./package.json'); \
           pkg.dependencies['firebase-admin'] = pkg.optionalDependencies['firebase-admin']; \
           delete pkg.optionalDependencies; \
-          pkg.version = (parseInt(pkg.version, 10) + 20) + '.0.0-firestore.' + pkg.version; \
+          pkg.version = (parseInt(pkg.version, 10) + 21) + '.0.0-firestore.' + pkg.version; \
           JSON.stringify(pkg, null, 2)" > pkg-firestore.json
 
       - name: Publish Firestore version
