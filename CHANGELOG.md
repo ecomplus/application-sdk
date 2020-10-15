@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/ecomplus/application-sdk/compare/v1.13.1...v1.14.0) (2020-10-15)
+
+
+### Features
+
+* **api-request:** handling ECOM_AUTH_DISABLE_API_RETRY env, also retry for timeout or server error ([91189c8](https://github.com/ecomplus/application-sdk/commit/91189c8251e32428aa1392c14ec859197698d2ae))
+
 ### [1.13.1](https://github.com/ecomplus/application-sdk/compare/v1.13.0...v1.13.1) (2020-07-26)
 
 ## [1.13.0](https://github.com/ecomplus/application-sdk/compare/v1.12.4...v1.13.0) (2020-06-03)
