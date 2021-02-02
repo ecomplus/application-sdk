@@ -34,14 +34,14 @@
     "firebase-admin": "9.x"
   },
   "dependencies": {
-    "@ecomplus/client": "^2.1.4",
+    "@ecomplus/client": "^2.2.0",
     "@ecomplus/utils": "^1.4.1",
     "axios": "^0.21.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
-    "husky": "^4.3.7",
+    "husky": "^4.3.8",
     "standard": "^14.3.4",
     "standard-version": "^9.1.0"
   },
