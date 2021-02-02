@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.2](https://github.com/ecomplus/application-sdk/compare/v1.14.1...v1.14.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* **handle-callback:** save 'expires' iso date to firestore doc ([af2bb68](https://github.com/ecomplus/application-sdk/commit/af2bb68a939a6e8e8fb87bf324ed79ce7aad510d))
+* **update-tokens:** stop manipulating firestore timestamp, check each document 'expires' date ([7eebb2e](https://github.com/ecomplus/application-sdk/commit/7eebb2ede7b044932271bce2428b9cda7089c6f6))
+
 ### [1.14.1](https://github.com/ecomplus/application-sdk/compare/v1.14.0...v1.14.1) (2021-01-13)
 
 ## [1.14.0](https://github.com/ecomplus/application-sdk/compare/v1.13.1...v1.14.0) (2020-10-15)
