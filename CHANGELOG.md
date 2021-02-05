@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.3](https://github.com/ecomplus/application-sdk/compare/v1.14.2...v1.14.3) (2021-02-05)
+
+
+### Bug Fixes
+
+* **update-tokens:** fix delay to refresh token request ([b859b9f](https://github.com/ecomplus/application-sdk/commit/b859b9ff5887d1caf1ffeb407514e49a5aa1e811))
+
 ### [1.14.2](https://github.com/ecomplus/application-sdk/compare/v1.14.1...v1.14.2) (2021-02-02)
 
 
