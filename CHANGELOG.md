@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.7](https://github.com/ecomplus/application-sdk/compare/v1.14.6...v1.14.7) (2021-03-08)
+
+
+### Bug Fixes
+
+* **update-tokens:** query up to 400 tokens, order by last updated (firestore) ([b1d8275](https://github.com/ecomplus/application-sdk/commit/b1d82750aa4893f52213482c9ae9c137e0161ab2))
+
 ### [1.14.6](https://github.com/ecomplus/application-sdk/compare/v1.14.5...v1.14.6) (2021-03-06)
 
 
