@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.9](https://github.com/ecomplus/application-sdk/compare/v1.14.8...v1.14.9) (2021-05-07)
+
+
+### Bug Fixes
+
+* **cloud-functions:** check for GCP_PROJECT env ([12781e8](https://github.com/ecomplus/application-sdk/commit/12781e8d10065cef153af5cf47f66b27e37c1b46))
+* **env:** get env vars inside function scope ([c7ca077](https://github.com/ecomplus/application-sdk/commit/c7ca077d96b574fe34930a70ccca4aabc5a8f216))
+
 ### [1.14.8](https://github.com/ecomplus/application-sdk/compare/v1.14.7...v1.14.8) (2021-03-08)
 
 
