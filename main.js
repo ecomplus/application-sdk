@@ -16,6 +16,15 @@ const ecomServerIps = [
   '2604:a880:400:d0::13:5001'
 ]
 
+const {
+  ECOM_AUTH_DB,
+  ECOM_AUTH_DEBUG,
+  ECOM_AUTH_UPDATE,
+  ECOM_AUTH_SETUP_TIMEOUT,
+  GCP_PROJECT,
+  GCLOUD_PROJECT
+} = process.env
+
 // axios HTTP client
 // https://github.com/axios/axios
 // create an instance using the config defaults provided by the library
@@ -33,7 +42,7 @@ const axios = require('axios').create({
 // optional setup constructor function
 let client, setup
 // try to get database filename from environtment variable
-const envDbFilename = process.env.ECOM_AUTH_DB
+const envDbFilename = ECOM_AUTH_DB
 
 // handle new promise
 const promise = new Promise((resolve, reject) => {
@@ -44,9 +53,11 @@ const promise = new Promise((resolve, reject) => {
       const table = 'ecomplus_app_auth'
 
       // setup instance client object
-      const debug = !process.env.ECOM_AUTH_DEBUG ? null : msg => {
-        console.log(`[ECOM_AUTH] ${msg}`)
-      }
+      const debug = !ECOM_AUTH_DEBUG
+        ? null
+        : msg => {
+          console.log(`[ECOM_AUTH] ${msg}`)
+        }
       client = {
         dbFilename,
         table,
@@ -63,7 +74,7 @@ const promise = new Promise((resolve, reject) => {
           const updateTokens = () => {
             require('./lib/services/update-tokens')(client)
           }
-          if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
+          if (disableUpdates !== true && ECOM_AUTH_UPDATE !== 'disabled') {
             // update access tokens periodically
             updateTokens()
           } else if (debug) {
@@ -128,9 +139,9 @@ const promise = new Promise((resolve, reject) => {
   }
 
   if (
-    process.env.ECOM_AUTH_SETUP_TIMEOUT !== 'disabled' &&
+    ECOM_AUTH_SETUP_TIMEOUT !== 'disabled' &&
     // ignore setup timeout for Google (Firebase) Cloud Functions by default
-    (!process.env.GCLOUD_PROJECT || process.env.ECOM_AUTH_SETUP_TIMEOUT === 'enabled')
+    ((!GCP_PROJECT && !GCLOUD_PROJECT) || ECOM_AUTH_SETUP_TIMEOUT === 'enabled')
   ) {
     // timeout to handle setup
     setTimeout(() => {
