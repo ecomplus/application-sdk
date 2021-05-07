@@ -42,7 +42,8 @@ const promise = new Promise((resolve, reject) => {
     ECOM_AUTH_UPDATE,
     ECOM_AUTH_SETUP_TIMEOUT,
     GCP_PROJECT,
-    GCLOUD_PROJECT
+    GCLOUD_PROJECT,
+    FIREBASE_CONFIG
   } = process.env
 
   // setup database and table
@@ -140,7 +141,7 @@ const promise = new Promise((resolve, reject) => {
   if (
     ECOM_AUTH_SETUP_TIMEOUT !== 'disabled' &&
     // ignore setup timeout for Google (Firebase) Cloud Functions by default
-    ((!GCP_PROJECT && !GCLOUD_PROJECT) || ECOM_AUTH_SETUP_TIMEOUT === 'enabled')
+    ((!GCP_PROJECT && !GCLOUD_PROJECT && !FIREBASE_CONFIG) || ECOM_AUTH_SETUP_TIMEOUT === 'enabled')
   ) {
     // timeout to handle setup
     setTimeout(() => {
