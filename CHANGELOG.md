@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.10](https://github.com/ecomplus/application-sdk/compare/v1.14.9...v1.14.10) (2021-05-07)
+
+
+### Bug Fixes
+
+* **cloud-functions:** also check for FIREBASE_CONFIG env ([31e9bd8](https://github.com/ecomplus/application-sdk/commit/31e9bd8504f2d4ccde671fb6a3e3d31e93cc647a))
+
 ### [1.14.9](https://github.com/ecomplus/application-sdk/compare/v1.14.8...v1.14.9) (2021-05-07)
 
 
