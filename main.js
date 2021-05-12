@@ -37,15 +37,6 @@ const envDbFilename = process.env.ECOM_AUTH_DB
 
 // handle new promise
 const promise = new Promise((resolve, reject) => {
-  const {
-    ECOM_AUTH_DEBUG,
-    ECOM_AUTH_UPDATE,
-    ECOM_AUTH_SETUP_TIMEOUT,
-    GCP_PROJECT,
-    GCLOUD_PROJECT,
-    FIREBASE_CONFIG
-  } = process.env
-
   // setup database and table
   setup = (dbFilename, disableUpdates, firestoreDb) => {
     dbFilename = firestoreDb ? null : dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
@@ -53,7 +44,7 @@ const promise = new Promise((resolve, reject) => {
       const table = 'ecomplus_app_auth'
 
       // setup instance client object
-      const debug = !ECOM_AUTH_DEBUG
+      const debug = !process.env.ECOM_AUTH_DEBUG
         ? null
         : msg => {
           console.log(`[ECOM_AUTH] ${msg}`)
@@ -74,7 +65,7 @@ const promise = new Promise((resolve, reject) => {
           const updateTokens = () => {
             require('./lib/services/update-tokens')(client)
           }
-          if (disableUpdates !== true && ECOM_AUTH_UPDATE !== 'disabled') {
+          if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
             // update access tokens periodically
             updateTokens()
           } else if (debug) {
@@ -137,6 +128,13 @@ const promise = new Promise((resolve, reject) => {
     }
     return promise
   }
+
+  const {
+    ECOM_AUTH_SETUP_TIMEOUT,
+    GCP_PROJECT,
+    GCLOUD_PROJECT,
+    FIREBASE_CONFIG
+  } = process.env
 
   if (
     ECOM_AUTH_SETUP_TIMEOUT !== 'disabled' &&
