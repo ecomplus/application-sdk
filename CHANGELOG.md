@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.11](https://github.com/ecomplus/application-sdk/compare/v1.14.10...v1.14.11) (2021-05-12)
+
+
+### Bug Fixes
+
+* **env:** get env vars inside function scope (runtime) ([6a3e4b4](https://github.com/ecomplus/application-sdk/commit/6a3e4b465d6e9381f8ab086d8fc5377da2c0d841))
+
 ### [1.14.10](https://github.com/ecomplus/application-sdk/compare/v1.14.9...v1.14.10) (2021-05-07)
 
 
