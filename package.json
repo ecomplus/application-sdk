@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/ecomplus/application-sdk#readme",
   "optionalDependencies": {
-    "firebase-admin": "^9.7.0",
+    "firebase-admin": "^9.9.0",
     "sqlite3": "4.x"
   },
   "dependencies": {
@@ -39,8 +39,8 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.3",
-    "@commitlint/config-conventional": "^12.1.3",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "husky": "^6.0.0",
     "standard": "^16.0.3",
     "standard-version": "^9.3.0"
