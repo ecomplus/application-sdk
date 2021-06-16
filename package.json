@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/ecomplus/application-sdk#readme",
   "optionalDependencies": {
-    "firebase-admin": "^9.7.0",
+    "firebase-admin": "^9.9.0",
     "sqlite3": "4.x"
   },
   "dependencies": {
