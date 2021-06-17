@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.1](https://github.com/ecomplus/application-sdk/compare/v1.15.0...v1.15.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* **api-request:** prevent requesting app endpoint without id ([f5277ae](https://github.com/ecomplus/application-sdk/commit/f5277ae99b9f86906f9ef4a64b719d8f4795a686))
+* **handle-callback:** try to save firestore doc with application info even on token refresh ([a8b706b](https://github.com/ecomplus/application-sdk/commit/a8b706b96a1870ba36629c85e901610fa1b464f1))
+
 ## [1.15.0](https://github.com/ecomplus/application-sdk/compare/v1.14.11...v1.15.0) (2021-06-17)
 
 
