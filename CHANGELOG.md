@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.4](https://github.com/ecomplus/application-sdk/compare/v1.15.3...v1.15.4) (2021-06-17)
+
+
+### Bug Fixes
+
+* **api-request:** send token request in advance when token would expire in up to 30min ([bc1949e](https://github.com/ecomplus/application-sdk/commit/bc1949e337f2a3a99284b5ccdbba633ebfcd6053))
+
 ### [1.15.3](https://github.com/ecomplus/application-sdk/compare/v1.15.2...v1.15.3) (2021-06-17)
 
 
