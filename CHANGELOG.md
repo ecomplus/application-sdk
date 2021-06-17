@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/ecomplus/application-sdk/compare/v1.14.11...v1.15.0) (2021-06-17)
+
+
+### Features
+
+* **api-request:** check token expires and send token update request in advance ([4e3be25](https://github.com/ecomplus/application-sdk/commit/4e3be251e502dc04b352d2bc745d5885fb803376))
+
+
+### Bug Fixes
+
+* **handle-callback:** on token update, merge firestore doc with store and authentication ids ([16b9e20](https://github.com/ecomplus/application-sdk/commit/16b9e20c811daa0d418c2810f8664b98abd8b6be))
+* **update-tokens:** delete tokens older than 30 days only ([4b37738](https://github.com/ecomplus/application-sdk/commit/4b37738a29054e6ae3335aaeaf921d6a8396c34e))
+
 ### [1.14.11](https://github.com/ecomplus/application-sdk/compare/v1.14.10...v1.14.11) (2021-05-12)
 
 
