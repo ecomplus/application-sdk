@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.3](https://github.com/ecomplus/application-sdk/compare/v1.15.2...v1.15.3) (2021-06-17)
+
+
+### Bug Fixes
+
+* **handle-callback:** mfix setting `authentication_id` on firestore doc before saving ([9e536b3](https://github.com/ecomplus/application-sdk/commit/9e536b37a55237877b636ea7b9aafc4f8950c566))
+
 ### [1.15.2](https://github.com/ecomplus/application-sdk/compare/v1.15.1...v1.15.2) (2021-06-17)
 
 
