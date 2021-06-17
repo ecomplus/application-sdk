@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.2](https://github.com/ecomplus/application-sdk/compare/v1.15.1...v1.15.2) (2021-06-17)
+
+
+### Bug Fixes
+
+* **handle-callback:** fix assinging values to firestore doc object ([ba07685](https://github.com/ecomplus/application-sdk/commit/ba076856baf040d7348151a238cb89f0be969d56))
+
 ### [1.15.1](https://github.com/ecomplus/application-sdk/compare/v1.15.0...v1.15.1) (2021-06-17)
 
 
