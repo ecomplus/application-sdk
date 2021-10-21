@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.5](https://github.com/ecomplus/application-sdk/compare/v1.15.4...v1.15.5) (2021-10-21)
+
+
+### Bug Fixes
+
+* **server-ips:** new server mods.x ips ([080b408](https://github.com/ecomplus/application-sdk/commit/080b4080cf19f4b5d444a1381a55b38cb04d97b3))
+
 ### [1.15.4](https://github.com/ecomplus/application-sdk/compare/v1.15.3...v1.15.4) (2021-06-17)
 
 

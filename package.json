@@ -1,6 +1,6 @@
 {
   "name": "@ecomplus/application-sdk",
-  "version": "1.15.4",
+  "version": "1.15.5",
   "description": "App auth and methods to E-Com Plus Store API with NodeJS and Firestore/SQLite",
   "main": "main.js",
   "scripts": {
