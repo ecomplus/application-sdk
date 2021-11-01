@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.6](https://github.com/ecomplus/application-sdk/compare/v1.15.5...v1.15.6) (2021-11-01)
+
+
+### Bug Fixes
+
+* **deps:** fix \`firebase-admin\` semver to fit v9 and v10 ([376049f](https://github.com/ecomplus/application-sdk/commit/376049f2c681328dc152a10a220ba1683fbb6813))
+
 ### [1.15.5](https://github.com/ecomplus/application-sdk/compare/v1.15.4...v1.15.5) (2021-10-21)
 
 
