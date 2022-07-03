@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.7](https://github.com/ecomplus/application-sdk/compare/v1.15.6...v1.15.7) (2022-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency firebase-admin to v11 ([#70](https://github.com/ecomplus/application-sdk/issues/70)) ([8ff037f](https://github.com/ecomplus/application-sdk/commit/8ff037f31a01a52e1636fa1a64003f87473b394c))
+
 ### [1.15.6](https://github.com/ecomplus/application-sdk/compare/v1.15.5...v1.15.6) (2021-11-01)
 
 
