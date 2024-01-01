@@ -36,7 +36,7 @@
   "dependencies": {
     "@ecomplus/client": "^2.2.1",
     "@ecomplus/utils": "^1.4.1",
-    "axios": "^1.6.2"
+    "axios": "^1.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
