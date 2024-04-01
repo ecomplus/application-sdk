@@ -34,13 +34,13 @@
     "sqlite3": "4.x"
   },
   "dependencies": {
-    "@ecomplus/client": "^2.2.1",
+    "@ecomplus/client": "^2.3.1",
     "@ecomplus/utils": "^1.4.1",
-    "axios": "^1.6.7"
+    "axios": "^1.6.8"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "@commitlint/config-conventional": "^19.0.3",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "husky": "^8.0.3",
     "standard": "^17.1.0",
     "standard-version": "^9.3.2"
