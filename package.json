@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "^19.1.0",
     "husky": "^8.0.3",
     "standard": "^17.1.0",
-    "standard-version": "^9.3.2"
+    "commit-and-tag-version": "^9.5.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
