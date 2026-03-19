@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/ecomplus/application-sdk/compare/v2.0.0...v3.0.0) (2026-03-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* restore setup() signature (dbFilename, disableUpdates, firestoreDb)
+
+### Bug Fixes
+
+* restore setup() signature (dbFilename, disableUpdates, firestoreDb) ([1a5b37e](https://github.com/ecomplus/application-sdk/commit/1a5b37ea345a158ffa063f304a718b045aab32c3))
+
 ## [2.0.0](https://github.com/ecomplus/application-sdk/compare/v1.15.7...v2.0.0) (2026-03-19)
 
 
