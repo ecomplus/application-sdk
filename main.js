@@ -41,100 +41,58 @@ const axios = require('axios').create({
 // keep returned client and promise
 // optional setup constructor function
 let client, setup
-// try to get database filename from environtment variable
-const envDbFilename = process.env.ECOM_AUTH_DB
 
 // handle new promise
 const promise = new Promise((resolve, reject) => {
   // setup database and table
-  setup = (dbFilename, disableUpdates, firestoreDb) => {
-    dbFilename = firestoreDb ? null : dbFilename || envDbFilename || process.cwd() + '/db.sqlite3'
-    if (!client || client.dbFilename !== dbFilename) {
-      const table = 'ecomplus_app_auth'
+  setup = (firestoreDb, disableUpdates) => {
+    const table = 'ecomplus_app_auth'
 
-      // setup instance client object
-      const debug = !process.env.ECOM_AUTH_DEBUG
-        ? null
-        : msg => {
-          console.log(`[ECOM_AUTH] ${msg}`)
-        }
-      client = {
-        dbFilename,
-        table,
-        axios,
-        debug
+    // setup instance client object
+    const debug = !process.env.ECOM_AUTH_DEBUG
+      ? null
+      : msg => {
+        console.log(`[ECOM_AUTH] ${msg}`)
       }
-      if (debug) {
-        debug(`Starting E-Com Plus App SDK with ${(firestoreDb ? 'Firestore' : 'SQLite3')}`)
-      }
-
-      // resolve promise with lib methods when DB is ready
-      const ready = err => {
-        if (!err) {
-          const updateTokens = () => {
-            require('./lib/services/update-tokens')(client)
-          }
-          if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
-            // update access tokens periodically
-            updateTokens()
-          } else if (debug) {
-            debug('Update tokens disabled')
-          }
-
-          resolve({
-            getAuth: require('./lib/methods/get-auth')(client),
-            handleCallback: require('./lib/methods/handle-callback')(client),
-            apiRequest: require('./lib/methods/api-request')(client),
-            apiApp: require('./lib/methods/api-app')(client),
-            appPublicBody: require('./lib/methods/app-public-body')(client),
-            refreshToken: require('./lib/methods/refresh-token')(client),
-            configureSetup: require('./lib/methods/configure-setup')(client),
-            saveProcedures: require('./lib/methods/save-procedures')(client),
-            deleteAuth: require('./lib/methods/delete-auth')(client),
-            updateTokens
-          })
-          if (debug) {
-            debug('✓ `ecomAuth` is ready')
-          }
-        } else {
-          reject(err)
-        }
-      }
-
-      if (firestoreDb) {
-        // Firestore client is supposed to be ready
-        // collectionReferece as db
-        client.db = client.collRef = firestoreDb.collection(table)
-        ready()
-      } else {
-        // SQLite3 client
-        // https://github.com/mapbox/node-sqlite3
-        const sqlite = require('sqlite3').verbose()
-
-        // init SQLite3 client with database filename
-        // https://github.com/mapbox/node-sqlite3
-        // reject all on error
-        client.db = new sqlite.Database(dbFilename, err => {
-          if (err) {
-            reject(err)
-          } else {
-            // try to run first query creating table
-            client.db.run('CREATE TABLE IF NOT EXISTS ' + table + ` (
-              created_at                  DATETIME  NOT NULL  DEFAULT CURRENT_TIMESTAMP,
-              updated_at                  DATETIME  NULL,
-              application_id              VARCHAR   NOT NULL,
-              application_app_id          INTEGER   NOT NULL,
-              application_title           VARCHAR   NOT NULL,
-              authentication_id           VARCHAR   NOT NULL  PRIMARY KEY,
-              authentication_permissions  TEXT      NULL,
-              store_id                    INTEGER   NOT NULL,
-              access_token                TEXT      NULL,
-              setted_up                   INTEGER   NOT NULL  DEFAULT 0
-            );`, ready)
-          }
-        })
-      }
+    client = {
+      table,
+      axios,
+      debug
     }
+    if (debug) {
+      debug('Starting E-Com Plus App SDK with Firestore')
+    }
+
+    // Firestore client is supposed to be ready
+    // collectionReference as db
+    client.db = client.collRef = firestoreDb.collection(table)
+
+    const updateTokens = () => {
+      require('./lib/services/update-tokens')(client)
+    }
+    if (disableUpdates !== true && process.env.ECOM_AUTH_UPDATE !== 'disabled') {
+      // update access tokens periodically
+      updateTokens()
+    } else if (debug) {
+      debug('Update tokens disabled')
+    }
+
+    resolve({
+      getAuth: require('./lib/methods/get-auth')(client),
+      handleCallback: require('./lib/methods/handle-callback')(client),
+      apiRequest: require('./lib/methods/api-request')(client),
+      apiApp: require('./lib/methods/api-app')(client),
+      appPublicBody: require('./lib/methods/app-public-body')(client),
+      refreshToken: require('./lib/methods/refresh-token')(client),
+      configureSetup: require('./lib/methods/configure-setup')(client),
+      saveProcedures: require('./lib/methods/save-procedures')(client),
+      deleteAuth: require('./lib/methods/delete-auth')(client),
+      updateTokens
+    })
+    if (debug) {
+      debug('✓ `ecomAuth` is ready')
+    }
+
     return promise
   }
 
@@ -158,12 +116,6 @@ const promise = new Promise((resolve, reject) => {
     }, 4000)
   }
 })
-
-if (envDbFilename) {
-  // databse filename defined by environtment variable
-  // auto trigger setup
-  setup()
-}
 
 module.exports = {
   setup,
