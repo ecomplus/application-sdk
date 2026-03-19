@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ecomplus/application-sdk/compare/v1.15.7...v2.0.0) (2026-03-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove SQLite support, Firestore-only
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#131](https://github.com/ecomplus/application-sdk/issues/131)) ([9f988b6](https://github.com/ecomplus/application-sdk/commit/9f988b6d3f65919bbfa9e0755905d87991149a9f))
+* **deps:** update dependency axios to ^1.13.4 ([#140](https://github.com/ecomplus/application-sdk/issues/140)) ([8a659eb](https://github.com/ecomplus/application-sdk/commit/8a659eb13484357369357f84be7f9fd60a1a7149))
+* **deps:** update dependency axios to ^1.13.6 ([#146](https://github.com/ecomplus/application-sdk/issues/146)) ([051d37b](https://github.com/ecomplus/application-sdk/commit/051d37bd4f2bbc264d5c70f0ea3ec161f72e03f8))
+* **deps:** update dependency axios to ^1.2.2 ([#77](https://github.com/ecomplus/application-sdk/issues/77)) ([bd6c77e](https://github.com/ecomplus/application-sdk/commit/bd6c77e86e9815ea7547bb33bc3afba6b72f575a))
+* **deps:** update dependency axios to ^1.6.2 ([#95](https://github.com/ecomplus/application-sdk/issues/95)) ([d39c96d](https://github.com/ecomplus/application-sdk/commit/d39c96deb35476d3fbc17b066ca41567814da91c))
+* **deps:** update dependency axios to ^1.6.3 ([#97](https://github.com/ecomplus/application-sdk/issues/97)) ([5a45558](https://github.com/ecomplus/application-sdk/commit/5a45558ab702f02b9fbe65ea1e53ecedcc96eae3))
+* **deps:** update dependency axios to v1 ([#75](https://github.com/ecomplus/application-sdk/issues/75)) ([b3842bc](https://github.com/ecomplus/application-sdk/commit/b3842bc1c0b812a0860a80f1c7b52c20ace907f1))
+* **deps:** update dependency axios to v1.7.4 [security] ([#114](https://github.com/ecomplus/application-sdk/issues/114)) ([52848a2](https://github.com/ecomplus/application-sdk/commit/52848a21bea245de4af0c57b50d3843e0d96bf37))
+* **deps:** update dependency firebase-admin to v12 ([#98](https://github.com/ecomplus/application-sdk/issues/98)) ([08948c7](https://github.com/ecomplus/application-sdk/commit/08948c710c3f9f63f48dbe0801e72f8e96bf88b5))
+
+
+* remove SQLite support, Firestore-only ([0ceada7](https://github.com/ecomplus/application-sdk/commit/0ceada75c613b382cf91e20c3c4db1eab58f35f6))
+
 ### [1.15.7](https://github.com/ecomplus/application-sdk/compare/v1.15.6...v1.15.7) (2022-07-03)
 
 
