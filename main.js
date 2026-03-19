@@ -45,7 +45,8 @@ let client, setup
 // handle new promise
 const promise = new Promise((resolve, reject) => {
   // setup database and table
-  setup = (firestoreDb, disableUpdates) => {
+  // eslint-disable-next-line no-unused-vars
+  setup = (dbFilename, disableUpdates, firestoreDb) => {
     const table = 'ecomplus_app_auth'
 
     // setup instance client object
@@ -63,7 +64,6 @@ const promise = new Promise((resolve, reject) => {
       debug('Starting E-Com Plus App SDK with Firestore')
     }
 
-    // Firestore client is supposed to be ready
     // collectionReference as db
     client.db = client.collRef = firestoreDb.collection(table)
 
