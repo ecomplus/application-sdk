@@ -1,7 +1,7 @@
 {
   "name": "@ecomplus/application-sdk",
-  "version": "1.15.7",
-  "description": "App auth and methods to E-Com Plus Store API with NodeJS and Firestore/SQLite",
+  "version": "2.0.0",
+  "description": "App auth and methods to E-Com Plus Store API with NodeJS and Firestore",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,6 @@
     "ecommerce",
     "authentication",
     "callback",
-    "sqlite",
     "firestore",
     "firebase"
   ],
@@ -29,14 +28,11 @@
     "url": "https://github.com/ecomplus/application-sdk/issues"
   },
   "homepage": "https://github.com/ecomplus/application-sdk#readme",
-  "optionalDependencies": {
-    "firebase-admin": ">=9 <13",
-    "sqlite3": "4.2.0"
-  },
   "dependencies": {
     "@ecomplus/client": "^2.4.0",
     "@ecomplus/utils": "^1.4.1",
-    "axios": "^1.13.6"
+    "axios": "^1.13.6",
+    "firebase-admin": ">=9 <13"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -44,9 +40,5 @@
     "husky": "^8.0.3",
     "standard": "^17.1.2",
     "standard-version": "^9.3.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
-    "access": "public"
   }
 }
