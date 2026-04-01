@@ -32,7 +32,7 @@
     "@ecomplus/client": "^2.4.0",
     "@ecomplus/utils": "^1.4.1",
     "axios": "^1.13.6",
-    "firebase-admin": ">=9 <13"
+    "firebase-admin": ">=9 <14"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
